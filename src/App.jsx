@@ -6,28 +6,27 @@ import UserStatus from './components/UserStatus'
 
 function App() {
   return (
-    <>
-      <h1>Supabase + Auth + Router</h1>
+    <div className="min-h-screen bg-[#F5ECE0] text-[#336D82] font-sans">
+      <h1 className="text-3xl font-bold text-center py-6">Supabase + Auth + Router</h1>
 
-      <header className="header">
-        <nav className="menu">
-          <NavLink to="/">Domů</NavLink>
-          <NavLink to="/about">O nás</NavLink>
-          <NavLink to="/secret">Tajemství</NavLink>
-          <NavLink to="/login">Přihlášení</NavLink>
-          <NavLink to="/register">Registrace</NavLink>
+      <header className="bg-[#5F99AE] text-white shadow-md">
+        <nav className="flex justify-center space-x-6 py-4">
+          <NavLink to="/" className="hover:underline">Domů</NavLink>
+          <NavLink to="/about" className="hover:underline">O nás</NavLink>
+          <NavLink to="/secret" className="hover:underline">Tajemství</NavLink>
+          <NavLink to="/login" className="hover:underline">Přihlášení</NavLink>
+          <NavLink to="/register" className="hover:underline">Registrace</NavLink>
         </nav>
 
-        <UserStatus />
+        <div className="text-center pb-2">
+          <UserStatus />
+        </div>
       </header>
 
-      <main className="main">
-
+      <main className="max-w-2xl mx-auto mt-10 p-6 bg-white shadow rounded-xl">
         <Outlet />
-
       </main>
-
-    </>
+    </div>
   )
 }
 
